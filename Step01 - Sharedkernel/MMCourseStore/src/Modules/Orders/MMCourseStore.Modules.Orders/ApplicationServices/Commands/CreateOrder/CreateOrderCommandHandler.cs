@@ -2,9 +2,9 @@
 using MMCourseStore.Framework.Commands;
 using MMCourseStore.Framework.Domain;
 using MMCourseStore.Framework.Services.DateTimeServices;
-using MMCourseStore.Modules.Courses.ApplicationServicesForIntegration.Queries.GetById;
 using MMCourseStore.Modules.Orders.Data;
 using MMCourseStore.Modules.Orders.Domain;
+using MMCourseStore.Modules.Sharedkernels.Courses.Queries.GetById;
 
 namespace MMCourseStore.Modules.Orders.ApplicationServices.Commands.CreateOrder;
 
@@ -40,6 +40,5 @@ public class CreateOrderCommandHandler : ICommandHandler<CreateOrderCommand, lon
         context.Orders.Add(order);
         await context.SaveChangesAsync(cancellationToken);
         return Result<long>.Success(order.Id);
-
     }
 }
