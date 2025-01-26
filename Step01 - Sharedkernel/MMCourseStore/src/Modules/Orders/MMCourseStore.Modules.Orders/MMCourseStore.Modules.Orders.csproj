@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Courses\MMCourseStore.Modules.Courses\MMCourseStore.Modules.Courses.csproj" />
+		<ProjectReference Include="..\..\Sharedkernels\MMCourseStore.Modules.Sharedkernels\MMCourseStore.Modules.Sharedkernels.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="ApplicationServices\Queries\" />
+	</ItemGroup>
+</Project>
